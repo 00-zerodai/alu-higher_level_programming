@@ -1,0 +1,24 @@
+The text_indentation function separates sentences at periods, question marks,
+and colons with two newline characters.
+
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+>>> text_indentation("Hello. World? Yes: done")
+Hello.
+<BLANKLINE>
+World?
+<BLANKLINE>
+Yes:
+<BLANKLINE>
+done
+
+>>> text_indentation("  alpha  \n beta?   gamma:  ")
+alpha
+beta?
+<BLANKLINE>
+gamma:
+<BLANKLINE>
+
+>>> text_indentation(12)
+Traceback (most recent call last):
+...
+TypeError: text must be a string

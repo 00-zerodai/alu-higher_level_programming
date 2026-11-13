@@ -1,0 +1,23 @@
+The say_my_name function displays first and last names.
+
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+>>> from contextlib import redirect_stdout
+>>> from io import StringIO
+>>> say_my_name("John", "Smith")
+My name is John Smith
+>>> say_my_name("Walter", "White")
+My name is Walter White
+>>> output = StringIO()
+>>> with redirect_stdout(output):
+...     say_my_name("Bob")
+>>> output.getvalue() == "My name is Bob \n"
+True
+
+>>> say_my_name(12, "White")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+>>> say_my_name("John", None)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
