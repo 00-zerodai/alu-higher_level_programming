@@ -7,6 +7,8 @@ The say_my_name function displays first and last names.
 My name is John Smith
 >>> say_my_name("Walter", "White")
 My name is Walter White
+>>> say_my_name()
+My name is  
 >>> output = StringIO()
 >>> with redirect_stdout(output):
 ...     say_my_name("Bob")
